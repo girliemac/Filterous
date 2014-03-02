@@ -8,7 +8,7 @@ The finished photo can be displayed as `canvas`, or as downloadable image format
 
 This works on modern mobile browsers as well.
 
-> Created by [Tomomi Imura](https://github.com/girliemac).
+> Created by [Tomomi Imura](https://github.com/girliemac)
 
 
 
@@ -18,7 +18,7 @@ This works on modern mobile browsers as well.
 
 ## App that uses this library
 
-[W3C CoreMob camera - Mobile Web App]()http://coremob.github.io/camera/vanilla/index.html
+[W3C CoreMob camera - Mobile Web App](http://coremob.github.io/camera/vanilla/index.html)
 
 
 ## Installation
