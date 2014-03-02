@@ -12,11 +12,11 @@ This works on modern mobile browsers as well.
 
 
 
-## Demo
+## Sample Demo
 
 [Filterous Demo](http://girliemac.github.io/Filterous/demo)
 
-## App that uses this library
+## Real-life Example
 
 [W3C CoreMob camera - Mobile Web App](http://coremob.github.io/camera/vanilla/index.html)
 
@@ -24,25 +24,30 @@ This works on modern mobile browsers as well.
 ## Installation
 
 Just include `filterous.js` in your HTML file.
-Filterous does not have any depencies.
 
 ```html
 <script src="filterous.js"></script>
 ```
 
+Filterous does not require any other depencies.
+
 ## Basic Usage
 
 Create a new instance.
-Leaving the second param results a finished photo as a canvas, otherwise in a specified images format.
 
 ```javascript
 var f = new Filterous(imageObject);
 ```
 
-Apply a filter (or more) and render.
+Leaving the second param results a finished photo as a canvas, otherwise in a specified images format.
 
 ```javascript
 var f = new Filterous(imageObject, 'jpeg');
+```
+
+Apply a filter (or multiple filters) then render.
+
+```javascript
 f.filterImage('brightness', 50);
 f.render();
 ```
@@ -53,11 +58,11 @@ f.render();
 f.filterImage('grayscale');
 f.filterImage('rgbAdjust', [1.4, 1.2, 1]);
 f.filterImage('convolute', [ 0, 0, 0,
-	    	                     0, 1, 0,
-	                           0, 0, 0 ]
+                             0, 1, 0,
+                             0, 0, 0 ]
 );
 ```
-or layer with an extra image:
+or add an image layer:
 
 ```javascript
 var starryLayer = new Image();
@@ -68,14 +73,14 @@ f.applyLayer(starryLayer);
 f.render();
 ```
 
-Reset the applied filter:
+Reset:
 
 ```javascript
 f.reset();
 ```
 
 
-## Using a preset
+## Using Presets (instead of adding manual filters)
 
 Import `filterousEffects.js`
 
@@ -85,6 +90,8 @@ Import `filterousEffects.js`
 ```javascript
 ApplyEffects.nostalgia(imageObject, 'jpeg');
 ```
+
+Take a look at the `filterousEffects.js` to see all available presets.
 
 ## License
 
