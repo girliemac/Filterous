@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<title>Filterous.js Demo</title>
+	
+	<meta charset="utf-8">
+	
+	<meta name="application-name" content="PhotoFilter.js Demo">
+	<meta name="viewport" content="width=device-width">
+	
+	<link href='http://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>	
+	<a href="https://github.com/girliemac/Filterous"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+	<header>
+		<h1>Filterous.js</h1>
+	</header>
+		
+
+	
+	<!-- Photo Preview -->
+	<section id="photoEffect">
+
+		<figure>
+			<!-- <div id="loader">Processing...</div> -->
+			<img id="originalPhoto" src="5399450126_7dcbb62276_z.jpg" alt="Aurora Borealis">
+			<figcaption>Aurora Borealis <span>http://flic.kr/p/9e8ApG</span></figcaption>
+		</figure>
+
+	
+		<!-- Photo Effects Buttons -->
+		<nav>
+			<!-- Filter Effects -->
+			<section id="filterButtons">
+				<div id="reset" class="filter">
+					<div class="filter-tag">Normal</div>
+				</div>
+				<div id="fluorescent" class="filter">
+					<div class="filter-tag">Fluorescent</div>
+				</div>
+				<div id="nostalgia" class="filter">
+					<div class="filter-tag">Nostalgia</div>
+				</div>
+				<div id="phykos" class="filter">
+					<div class="filter-tag">Phykos</div>
+				</div>
+				<div id="lotus" class="filter">
+					<div class="filter-tag">Lotus</div>
+				</div>
+				<div id="memphis" class="filter">
+					<div class="filter-tag">Memphis</div>
+				</div>
+				<div id="deutlich" class="filter">
+					<div class="filter-tag">Deutlich</div>
+				</div>
+				<div id="sumie" class="filter">
+					<div class="filter-tag">Sumie</div>
+				</div>
+				<div id="rockstar" class="filter">
+					<div class="filter-tag">Rock Star</div>
+				</div>
+			</section>
+		</nav>
+	</section>
+	
+	
+	<script src="../src/filterous.js"></script>
+	<script src="../src/filterousEffects.js"></script>
+	<script>
+	(function() {
+		var originalPhoto = document.getElementById('originalPhoto');
+		
+		document.getElementById('filterButtons').addEventListener('click', prepFilterEffect, false);
+		
+		function prepFilterEffect(e){
+			var filterButton = getFilterButton(e.target);
+			if(!filterButton) return;
+			
+			ApplyEffects[filterButton.id](originalPhoto, 'jpeg');
+
+		}
+		function getFilterButton(target) {
+			var button;
+			if(target.classList.contains('filter')) {
+				button = target;
+			} else if (target.parentNode.classList.contains('filter')) {
+				button = target.parentNode;
+			}
+			return button;
+		}
+	})();
+	</script>
+</body>
+</html>
