@@ -14,7 +14,7 @@ This works on modern mobile browsers as well.
 
 ## Demo
 
-[Filterous Demo](http://girliemac.github.io/Filterous/demo.
+[Filterous Demo](http://girliemac.github.io/Filterous/demo)
 
 ## App that uses this library
 
