@@ -96,3 +96,8 @@ Take a look at the `filterousEffects.js` to see all available presets.
 ## License
 
 [MIT License](http://opensource.org/licenses/MIT)
+
+
+## Thank you
+
+Thank you [html5rocks.com](http://www.html5rocks.com/en/tutorials/canvas/imagefilters/) for the tutorial on the pixel manpulating tutorials :-)
