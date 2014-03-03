@@ -24,6 +24,9 @@ body{
 img {
 	border: 0;
 }
+a {
+	color: #72b809;
+}
 
 /* Base Styles */
 
@@ -64,6 +67,10 @@ footer {
 figure {
 	margin: 0;
 	text-align: center;
+}
+
+#photoEffect {
+	position: relative;
 }
 
 @media (min-width: 700px) {
@@ -122,15 +129,11 @@ figure {
 	figcaption {
 		color: #333;
 		font-size: 1.8em;
-		line-height: 1.2;
+		line-height: 2;
 		padding: 10px;
+		text-align: center;
 		font-family: 'Homemade Apple', sans-serif;
 		font-weight: 600;
-	}
-	figcaption span {
-		display: block;
-		text-align: right;
-		font-size: .5em;
 	}
 }
 
@@ -160,12 +163,6 @@ nav {
     text-align: center;
     width: 100%;
     padding: .75em 0 .5em;
-    background: rgba(0, 0, 0, .3);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 5%,rgba(0,0,0,0) 100%);
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0) 100%);
-    background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0) 100%);
-    background: -o-linear-gradient(top, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(top, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0) 100%);
 }
 
 #filterButtons {
@@ -178,8 +175,8 @@ nav {
 }
 .filter {
     display: inline-block;
-    margin: 3px;
-    border-radius: 8px;
+    margin: 3px 8px;
+    border-radius: 50%;
     box-shadow: inset 0 0 10px #000;
     height: 72px;
     width: 72px;
@@ -226,3 +223,20 @@ nav {
     padding-top: 58px;
 }
 
+/* More Photos */
+#more {
+	position: absolute;
+	top: 0;
+	left: 1em;
+	display: none;
+}
+#more small {
+	display: block;
+	font-size: .75em;
+	opacity: .5;
+}
+@media (min-width: 960px) {
+	#more {
+		display: block;
+	}
+}

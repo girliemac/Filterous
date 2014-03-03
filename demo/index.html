@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>	
+
 	<a href="https://github.com/girliemac/Filterous"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
 	<header>
@@ -19,14 +20,13 @@
 	</header>
 		
 
-	
 	<!-- Photo Preview -->
 	<section id="photoEffect">
 
 		<figure>
 			<!-- <div id="loader">Processing...</div> -->
-			<img id="originalPhoto" src="5399450126_7dcbb62276_z.jpg" alt="Aurora Borealis">
-			<figcaption>Aurora Borealis <span>http://flic.kr/p/9e8ApG</span></figcaption>
+			<img id="originalPhoto" src="aurora.jpg" alt="Aurora Borealis">
+			<figcaption id="caption">Aurora Borealis</figcaption>
 		</figure>
 
 	
@@ -63,9 +63,17 @@
 				</div>
 			</section>
 		</nav>
+		
+		<!-- More photos -->
+		<ul id="more">
+			<li><a id="aurora" href="#aurora">Aurora Borealis</a><small>http://flic.kr/p/9e8ApG</small></li>
+			<li><a id="bride" href="#bride">Hindu Bride</a><small>http://commons.wikimedia.org/<br>wiki/File:Hindu_Bride,<br>_Ahmedabad,_Gujarat.jpg</small></li>
+			<li><a id="macarons" href="#macarons">Macarons</a><small>http://flic.kr/p/9kthcD</small></li>
+		</ul>
+	
 	</section>
 	
-	
+
 	<script src="../src/filterous.js"></script>
 	<script src="../src/filterousEffects.js"></script>
 	<script>
@@ -90,6 +98,28 @@
 			}
 			return button;
 		}
+		
+		// Additional photos
+		var p1 = new Image();
+		p1.src = 'aurora.jpg';
+		var p2 = new Image();
+		p1.src = 'macarons.jpg';
+
+		var photos = {
+			aurora: 'Aurora Borealis',
+			bride: 'विवाह',
+			macarons: 'Colorful Macarons'
+		};
+		
+		var caption = document.getElementById('caption');
+		
+		window.addEventListener('hashchange', function(e){
+			var hash = location.hash.substr(1);
+			originalPhoto.src = hash + '.jpg';	
+			caption.textContent = photos[hash];	
+		}, false);
+		
+		
 	})();
 	</script>
 </body>
