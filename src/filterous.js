@@ -1,8 +1,9 @@
 /*
- *	Filterous,js: Simple Photo Filters using Canvas
- *	Referenced: html5rocks.com/en/tutorials/canvas/imagefilters/
- *
- *  Last modified: March 1, 2014
+ *  Filterous.js - Simple Photo Filters using Canvas 
+ *  https://github.com/girliemac/Filterous/
+ *  Tomomi Imura (@girlie_mac) - http://girliemac.com
+ *  License under MIT
+ *  Updated on: March 2, 2014
  */
 
 var Filterous = function(imgObj, output) {
