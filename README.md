@@ -12,11 +12,11 @@ This works on modern mobile browsers as well.
 
 
 
-## Sample Demo
+## Simple Demo
 
 [Filterous Demo](http://girliemac.github.io/Filterous/demo)
 
-## Real-life Example
+## Real-life Example App
 
 [W3C CoreMob camera - Mobile Web App](http://coremob.github.io/camera/vanilla/index.html)
 
@@ -80,9 +80,10 @@ f.reset();
 ```
 
 
-## Using Presets (instead of adding manual filters)
+## Using Presets (instead of defining filters manually)
 
-Import `filterousEffects.js`
+- Import `filterousEffects.js`.
+- Include the `effects` folder (contains the overlay image).
 
 ```html
 <script src="filterousEffects.js"></script>
