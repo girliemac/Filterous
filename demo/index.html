@@ -25,7 +25,7 @@
 
 		<figure>
 			<!-- <div id="loader">Processing...</div> -->
-			<img id="originalPhoto" src="aurora.jpg" alt="Aurora Borealis">
+			<img id="originalPhoto" src="aurora.jpg" alt="Aurora Borealis" width="500" height="500">
 			<figcaption id="caption">Aurora Borealis</figcaption>
 		</figure>
 
@@ -99,7 +99,8 @@
 			return button;
 		}
 		
-		// Additional photos
+		// Additional photo samples --
+		
 		var p1 = new Image();
 		p1.src = 'aurora.jpg';
 		var p2 = new Image();
@@ -117,6 +118,11 @@
 			var hash = location.hash.substr(1);
 			originalPhoto.src = hash + '.jpg';	
 			caption.textContent = photos[hash];	
+			var prevFilteredPhoto = document.getElementById('filteredPhoto');
+			if(prevFilteredPhoto) {	
+				prevFilteredPhoto.parentNode.removeChild(prevFilteredPhoto);
+				originalPhoto.removeAttribute('hidden');
+			}
 		}, false);
 		
 		

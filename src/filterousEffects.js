@@ -7,7 +7,7 @@
 // Prepare image-layer effects
 
 var rockstarLayer = new Image();
-rockstarLayer.src = 'effects/bokeh-stars.png';
+rockstarLayer.src = './effects/bokeh-stars.png';
 
 
 // Define named effects
