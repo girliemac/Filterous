@@ -1,4 +1,8 @@
-![Filterous](http://girliemac.com/assets/images/articles/2014/03/filtrous.jpg)
+**The completely new vewsion, Filterous-2 for both JavaScript for browser and Node.js is available at https://github.com/girliemac/filterous-2!**
+
+This repo is no longer maintained.
+
+![Filterous](http://girliemac.com/assets/images/articles/2014/03/filtrous.jpg?raw=true)
 
 Filterous
 =========
